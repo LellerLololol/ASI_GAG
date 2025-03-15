@@ -8,11 +8,13 @@ Python script mis tasakaalustab reaktsioonivõrrandeid.
 pip install chempy
 ```
 
-## Usage
+## Console Ver Usage
 ```python
 balance_equation("CO2 + H2O -> C6H12O6 + O2")
 # Output: 6CO2 + 6H2O -> C6H12O6 + 6O2
 ```
+
+## GUI ver usage
 
 ## Features
 - Töötab ka ioonide ning laengutega
