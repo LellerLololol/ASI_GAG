@@ -1,0 +1,1 @@
+stdin = input().strip().split()
