@@ -15,9 +15,8 @@ balance_equation("CO2 + H2O -> C6H12O6 + O2")
 ```
 
 ## Features
-- Supports redox and hydrate reactions
-- Handles invisible characters & formatting errors
-- Error handling for invalid equations
+- Töötab ka ioonide ning laengutega
+- Enamus ajast leiab ka IUPAC nimed üles
 
 ## License
 MIT License
