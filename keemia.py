@@ -7,7 +7,7 @@ left_side = left_side.split("+")
 right_side = right_side.split("+")
 
 def element_counter(reaction):
-    counter = dd(int)
+    counter = dd(list)
 
     buf = ""
     buf_n = ""
@@ -17,9 +17,9 @@ def element_counter(reaction):
             if char.isupper():
                 if buf:
                     if buf_n:
-                        counter[buf] += int(buf_n)
+                        counter[buf].append(int(buf_n))
                     else:
-                        counter[buf] += 1
+                        counter[buf].append(1)
                 buf = char
                 buf_n = ""
             elif char.islower():
@@ -28,9 +28,9 @@ def element_counter(reaction):
                 buf_n += char
         if buf:
             if buf_n:
-                counter[buf] += int(buf_n)
+                counter[buf].append(int(buf_n))
             else:
-                counter[buf] += 1
+                counter[buf].append(1)
     return counter
 
 counter_left = element_counter(left_side)
