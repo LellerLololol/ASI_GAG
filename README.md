@@ -9,8 +9,7 @@ pip install chempy
 ```
 
 ## Console Ver Usage
-```Change the equation variables in the code
-```
+Change the equation variables in the code
 
 ## GUI ver usage
 
