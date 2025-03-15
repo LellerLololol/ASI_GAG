@@ -6,7 +6,4 @@ right_side = right_side.split("+")
 
 for element in left_side:
     element = element.strip()
-    if element[0].isdigit():
-        print(element)
-    else:
-        print("1" + element)
+    
