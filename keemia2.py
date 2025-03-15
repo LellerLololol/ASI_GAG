@@ -7,13 +7,14 @@ def balance_equation(equation: str):
         reactants = [r.strip() for r in reactants.split("+")]
         products = [p.strip() for p in products.split("+")]
 
-        # Parse as substances to include charge information
+        # Convert reactants and products to Substance objects (to handle ions)
         reactant_set = {Substance.from_formula(r) for r in reactants}
         product_set = {Substance.from_formula(p) for p in products}
 
+        # Balance stoichiometry
         balanced = balance_stoichiometry(reactant_set, product_set)
 
-        # Format output
+        # Format output correctly
         balanced_reactants = " + ".join(
             f"{balanced[0][Substance.from_formula(r)] if balanced[0][Substance.from_formula(r)] != 1 else ''}{r}"
             for r in reactants
@@ -31,5 +32,5 @@ def balance_equation(equation: str):
 equation1 = "CO2 + H2O -> C6H12O6 + O2"
 equation2 = "Fe2+ + MnO4- + H+ -> Fe3+ + Mn2+ + H2O"
 
-print(balance_equation(equation1))
-print(balance_equation(equation2))
+print(balance_equation(equation1))  # Should correctly balance glucose formation
+print(balance_equation(equation2))  # Should now correctly balance the redox reaction
