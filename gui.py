@@ -1,12 +1,12 @@
 from keemia2 import balance_equation
+import tkinter as tk
+from tkinter import ttk
 import ctypes
 scale_factor = ctypes.windll.shcore.GetScaleFactorForDevice(0)/100
 ctypes.windll.shcore.SetProcessDpiAwareness(1)
 
 
 # GUI
-import tkinter as tk
-from tkinter import ttk
 def balance_and_display():
     equation = equation_entry.get()
     try:
@@ -36,6 +36,8 @@ balance_button.pack(pady=5)
 
 result_label = ttk.Label(frame, text="Balanced equation will appear here")
 result_label.pack(pady=10)
+
+
 
 # Start the main loop
 root.mainloop()
