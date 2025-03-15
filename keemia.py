@@ -1,3 +1,5 @@
+from sympy import symbols, Eq, solve
+import re
 
 # Format input: CO2 + H2O -> C6H12O6 + O2 
 # Format output: 6CO2 + H2O -> C6H12O6 + 6O2
@@ -7,11 +9,9 @@ right_side = right_side.split("+")
 
 for element in left_side:
     element = element.strip()
+
+
     
-from sympy import symbols, Eq, solve
-import re
-
-
 def parse_compound(compound):
     elements = re.findall(r'([A-Z][a-z]*)(\d*)', compound)
     return {el: int(count) if count else 1 for el, count in elements}
@@ -51,4 +51,5 @@ def balance_equation(reactants, products):
 
     return " + ".join(f"{balanced_coeffs[i]} {reactants[i]}" for i in range(len(reactants))) + " -> " + \
            " + ".join(f"{balanced_coeffs[i+len(reactants)]} {products[i]}" for i in range(len(products)))
+
 
