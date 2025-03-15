@@ -13,6 +13,8 @@ Change the equation variables in the code
 
 ## Keemia.py on deprecated!!!!!!
 
+## Fabi branchis on töötava GUI-ga versioon
+
 ## Features
 - Töötab ka ioonide ning laengutega
 - Enamus ajast leiab ka IUPAC nimed üles
